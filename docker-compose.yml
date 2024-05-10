@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  db:
+    image: postgres:latest
+    container_name: my-postgres-db
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: my_database
+      POSTGRES_USER: lp
+      POSTGRES_PASSWORD: training
+    volumes:
+      - ./data:/var/lib/postgresql/data
